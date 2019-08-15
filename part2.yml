@@ -4,26 +4,11 @@ parts:
     intro: In this part we will Setup Jenkins, and setup an automated pipeline to build, push and deploy our custom appliction.
     steps:
 
-      - cap: Start up the Kubernetes cluster with Minikube. 
-        com: minikube stop; minikube start --memory 8000 --cpus 2 --kubernetes-version v1.11.0
-
-      - cap: Before we do anything, let's make sure the private registry deployment we've setup in the previous part is available.
-        com: kubectl rollout status deployment/registry
-
       - cap: Let's build the Jenkins Docker image we'll use in our Kubernetes cluster. 
-        com: docker build -t 127.0.0.1:30400/jenkins:latest -f applications/jenkins/Dockerfile applications/jenkins
+        com: docker build -t alex301427/jenkins:latest -f applications/jenkins/Dockerfile applications/jenkins
 
-      - cap: Once again we'll need to set up the Socat Registry proxy container to push images, so let's build it. Feel free to skip this step in case the socat-registry image already exists from Part 1 (to check, run `docker images` in a separate terminal). 
-        com: docker build -t socat-registry -f applications/socat/Dockerfile applications/socat
-
-      - cap: Run the proxy container from the image.
-        com: docker stop socat-registry; docker rm socat-registry; docker run -d -e "REG_IP=`minikube ip`" -e "REG_PORT=30400" --name socat-registry -p 30400:5000 socat-registry; sleep 10
-
-      - cap: With our proxy container up and running, we can now push our Jenkins image to the local repository.
-        com: docker push 127.0.0.1:30400/jenkins:latest
-
-      - cap: The proxy’s work is done, so you can go ahead and stop it.
-        com: docker stop socat-registry
+      - cap: We can now push our Jenkins image to the docker.io repository.
+        com: docker push alex301427/jenkins:latest
 
       - cap: Deploy Jenkins, which we’ll use to create our automated CI/CD pipeline. It will take the pod a minute or two to roll out.
         com: kubectl apply -f manifests/jenkins.yaml; kubectl rollout status deployment/jenkins
@@ -31,7 +16,7 @@ parts:
       - cap: Open the Jenkins UI in a web browser. 
         com: minikube service jenkins
 
-      - cap: Display the Jenkins admin password with the following command, and right-click to copy it. IMPORTANT: BE CAREFUL NOT TO PRESS CTRL-C TO COPY THE PASSWORD AS THIS WILL STOP THE SCRIPT
+      - cap: Display the Jenkins admin password with the following command, and right-click to copy it. ALSO IMPORTANT!  You'll only need to do the password and pipeline setup once, as the container user persistent storage. IMPORTANT: BE CAREFUL NOT TO PRESS CTRL-C TO COPY THE PASSWORD AS THIS WILL STOP THE SCRIPT
         com: kubectl exec -it `kubectl get pods --selector=app=jenkins --output=jsonpath={.items..metadata.name}` cat /var/jenkins_home/secrets/initialAdminPassword
 
       - cap: Switch back to the Jenkins UI. Paste the Jenkins admin password in the box and click Continue. Click Install suggested plugins. Plugins have actually been pre-downloaded during the Jenkins image build, so this step should finish fairly quickly. 

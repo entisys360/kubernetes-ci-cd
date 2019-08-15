@@ -1,6 +1,8 @@
 .DS_Store
 .vscode
 .idea
+.orig
+.old
 node_modules
 node_modules/
 node_modules/*

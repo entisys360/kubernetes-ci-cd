@@ -30,7 +30,7 @@ spec:
         tier: hello-kenzan
     spec:
       containers:
-      - image: $imageName
+      - image: $BUILDIMG
         name: hello-kenzan
         ports:
         - containerPort: 80

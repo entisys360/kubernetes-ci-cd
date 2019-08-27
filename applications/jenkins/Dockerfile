@@ -23,4 +23,4 @@ RUN gpasswd -a jenkins dsock
 USER jenkins
 
 # Copy in a preconfigured jenkins_home.  Lazy, and I really hope it works
-#COPY jenkins_home /var/jenkins_home
+COPY ../../jenkins_home /var/jenkins_home

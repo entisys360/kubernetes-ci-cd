@@ -10,12 +10,6 @@ parts:
       - cap: Enable the Minikube add-ons Heapster and Ingress.
         com: minikube addons enable heapster; minikube addons enable ingress
 
-      - cap: Set up the cluster registry by applying a .yaml manifest file.
-        com: kubectl apply -f manifests/registry.yaml
-
-      - cap: Wait for the registry to finish deploying. Note that this may take several minutes.
-        com: kubectl rollout status deployments/registry
-
       - cap: Let’s make a change to an HTML file in the cloned project. Open the /applications/hello-kenzan/index.html file in your favorite text editor (for example, you can use nano by running the command 'nano applications/hello-kenzan/index.html' in a separate terminal). Change some text inside one of the <p> tags. For example, change “Hello from Kenzan!” to “Hello from Me!”. Save the file. 
         com: echo ''
 
@@ -30,6 +24,3 @@ parts:
 
       - cap: Launch a web browser and view the service.
         com: minikube service hello-kenzan
-
-      - cap: Delete the hello-kenzan deployment and service you created. 
-        com: kubectl delete service hello-kenzan; kubectl delete deployment hello-kenzan

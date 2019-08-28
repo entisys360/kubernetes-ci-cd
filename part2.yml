@@ -4,14 +4,27 @@ parts:
     intro: In this part we will Setup Jenkins, and setup an automated pipeline to build, push and deploy our custom appliction.
     steps:
 
+
       - cap: Let's build the Jenkins Docker image we'll use in our Kubernetes cluster. 
         com: docker build -t alex301427/jenkins:latest -f applications/jenkins/Dockerfile applications/jenkins
 
       - cap: We can now push our Jenkins image to the docker.io repository.
         com: docker push alex301427/jenkins:latest
 
+      - cap: Determine the virtual IP address of cluster.  We need this due to a recent update to Virtual Box.
+        com: minikube ip
+
+      - cap: Set the IP address of the cluster IP into the jenkins manifest file..
+        com: cat ./manifests/jenkins.yaml | sed "s/192.168.99.1../"$(minikube ip)"/g" > ./manifests/jenkins.yaml.orig ; cp ./manifests/jenkins.yaml.orig ./manifests/jenkins.yaml
+
       - cap: Deploy Jenkins, which we’ll use to create our automated CI/CD pipeline. It will take the pod a minute or two to roll out.
         com: kubectl apply -f manifests/jenkins.yaml; kubectl rollout status deployment/jenkins
+
+      - cap: Now we can push our Jenkins config to the Jenkins POD.  Didn't work from Dockerfile.
+        com: kubectl cp ./applications/jenkins/jenkins_home default/$(kubectl get pods | awk '/jenkins/ { print $1}'):var/
+
+      - cap: Restart minikube, so Jenkins chnages take effect, and to show "bounceability" of the cluster via state saved in etcd.
+        com: minikube stop; minikube start
 
       - cap: Open the Jenkins UI in a web browser. 
         com: minikube service jenkins

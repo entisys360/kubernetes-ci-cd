@@ -21,8 +21,9 @@ metadata:
   labels:
     app: hello-kenzan
 spec:
+  replicas: 3
   strategy:
-    type: Recreate
+    type: RollingUpdate
   template:
     metadata:
       labels:

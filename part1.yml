@@ -20,7 +20,7 @@ parts:
         com: docker push alex301427/hello-kenzan:latest
 
       - cap: With the image in our docker.io registry, the last thing to do is apply the manifest to create and deploy the hello-kenzan pod based on the image.
-        com: kubectl apply -f applications/hello-kenzan/k8s/manual-deployment.yaml
+        com: kubectl apply -f applications/hello-kenzan/k8s/manual-deployment.yaml ; kubectl rollout status deployment/hello-kenzan
 
       - cap: Launch a web browser and view the service.
         com: minikube service hello-kenzan

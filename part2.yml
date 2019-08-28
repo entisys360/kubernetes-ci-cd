@@ -11,9 +11,6 @@ parts:
       - cap: We can now push our Jenkins image to the docker.io repository.
         com: docker push alex301427/jenkins:latest
 
-      - cap: Determine the virtual IP address of cluster.  We need this due to a recent update to Virtual Box.
-        com: minikube ip
-
       - cap: Set the IP address of the cluster IP into the jenkins manifest file..
         com: cat ./manifests/jenkins.yaml | sed "s/192.168.99.1../"$(minikube ip)"/g" > ./manifests/jenkins.yaml.orig ; cp ./manifests/jenkins.yaml.orig ./manifests/jenkins.yaml
 
@@ -23,35 +20,11 @@ parts:
       - cap: Now we can push our Jenkins config to the Jenkins POD.  Didn't work from Dockerfile.
         com: kubectl cp ./applications/jenkins/jenkins_home default/$(kubectl get pods | awk '/jenkins/ { print $1}'):var/
 
-      - cap: Restart minikube, so Jenkins chnages take effect, and to show "bounceability" of the cluster via state saved in etcd.
+      - cap: Restart minikube, so Jenkins config changes take effect, and to show "bounceability" of the cluster via state saved in etcd.
         com: minikube stop; minikube start
 
       - cap: Open the Jenkins UI in a web browser. 
         com: minikube service jenkins
-
-      - cap: Display the Jenkins admin password with the following command, and right-click to copy it. ALSO IMPORTANT!  You'll only need to do the password and pipeline setup once, as the container user persistent storage. IMPORTANT: BE CAREFUL NOT TO PRESS CTRL-C TO COPY THE PASSWORD AS THIS WILL STOP THE SCRIPT
-        com: kubectl exec -it `kubectl get pods --selector=app=jenkins --output=jsonpath={.items..metadata.name}` cat /var/jenkins_home/secrets/initialAdminPassword
-
-      - cap: Switch back to the Jenkins UI. Paste the Jenkins admin password in the box and click Continue. Click Install suggested plugins. Plugins have actually been pre-downloaded during the Jenkins image build, so this step should finish fairly quickly. 
-        com: echo '' 
-
-      - cap: Create an admin user and credentials, and click Save and Continue. (Make sure to remember these credentials as you will need them for repeated logins.) On the Instance Configuration page, click Save and Finish. On the next page, click Restart (if it appears to hang for some time on restarting, you may have to refresh the browser window). Login to Jenkins.
-        com: echo ''
-
-      - cap: Before we create a pipeline, we first need to provision the Kubernetes Continuous Deploy plugin with a kubeconfig file that will allow access to our Kubernetes cluster. In Jenkins on the left, click on Credentials, select the Jenkins store, then Global credentials (unrestricted), and Add Credentials on the left menu.
-        com: echo ''
-
-      - cap: The following values must be entered precisely as indicated: for the Kind field select the option `Kubernetes configuration (kubeconfig)`, set the ID as `kenzan_kubeconfig`, set Kubeconfig to `From a file on the Jenkins master`, and specify the the file path as `/var/jenkins_home/.kube/config`. Click the OK button.
-        com: echo ''
-
-      - cap: We now want to create a new pipeline for use with our Hello-Kenzan app. Back on Jenkins home, on the left, click New Item. Enter the item name as "Hello-Kenzan Pipeline", select Pipeline, and click OK.
-        com: echo ''
-
-      - cap: Under the Pipeline section at the bottom, change the Definition to be "Pipeline script from SCM". 
-        com: echo ''
-
-      - cap: Change the SCM to Git. Change the Repository URL to be the URL of your forked Git repository, such as https://github.com/[GIT USERNAME]/kubernetes-ci-cd. Click Save. On the left, click Build Now to run the new pipeline. 
-        com: echo ''
 
       - cap: After all pipeline stages are colored green as complete, view the Hello-Kenzan application.
         com: minikube service hello-kenzan

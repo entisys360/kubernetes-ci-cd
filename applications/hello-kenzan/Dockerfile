@@ -11,4 +11,4 @@ EXPOSE 80
 # as each container will then have their own container ID in their respective index.html file..
 #
 
-RUN sleep 1 ; echo "Container hostname = $(hostname)"  >> /usr/share/nginx/html/index.html ; exec nginx
+RUN sleep 10 ; echo "Container hostname = $(hostname)"  >> /usr/share/nginx/html/index.html ; exec nginx

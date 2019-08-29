@@ -2,6 +2,7 @@ FROM nginx:latest
 
 COPY index.html /usr/share/nginx/html/index.html
 COPY DockerFileEx.jpg /usr/share/nginx/html/DockerFileEx.jpg
+COPY rc.local /etc/rc.local
 
 EXPOSE 80
 
@@ -11,4 +12,4 @@ EXPOSE 80
 # as each container will then have their own container ID in their respective index.html file..
 #
 
-RUN cat /etc/hostname >> /usr/share/nginx/html/index.html ; exec nginx
+#RUN cat /etc/hostname >> /usr/share/nginx/html/index.html ; exec nginx

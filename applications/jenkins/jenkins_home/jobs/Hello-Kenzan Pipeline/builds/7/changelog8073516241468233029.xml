@@ -1,0 +1,13 @@
+commit 110d9a4546297c3347ea5cd5cd57b1a1e10203e6
+tree feabce47588099862c6647de557cc01a50921f66
+parent 7536d98a73af6f4459b3e79e9865172a389abe51
+author Alex Vinson <alex.vinson@entisys360.com> 2019-08-27 15:15:31 -0700
+committer Alex Vinson <alex.vinson@entisys360.com> 2019-08-27 15:15:31 -0700
+
+    Added message to Index.html
+
+
+
+:100644 100644 b92e3ada83b9f3dac5788ef4895979a16883fd18 6523f341263cfb3be6f9154535a431e524d200c9 M	applications/hello-kenzan/index.html
+:100644 100644 f8508c5ae72967dc43b19a1d96091080a1e437cd a384f44fc2fe923b972fefe25c9e65f80973cf27 M	applications/jenkins/Dockerfile
+:100644 100644 4168a3d41d4ff4ac66ad54ccafa95e0b58909814 063738a4072c68a689eac08d23e7872519c6bbd0 M	part1.yml

@@ -1,0 +1,164 @@
+Started by user [8mha:////4Bcnt1oj+/7yeAqCA9x0Dp2MRgxc5joeAT6b7jmnJTKLAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Obtained Jenkinsfile from git https://github.com/entisys360/kubernetes-ci-cd.git
+Running in Durability level: MAX_SURVIVABILITY
+[8mha:////4B3Yu4+p6Mf0LJr5SBrVKYWSLrzxdxIQuLQcvq/VmWUuAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4JS8QLrv9mxP69niOGWGdc3nCOJzhN3ATlsHDDXVXj6EAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4CQB4c3D5Nr9+ESArpalDsf7I3+g5mjBssFHpywAakDUAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZh/eT83ILSktQifY3cxGIgrakPAHib2iPIAAAA[0mJenkins in /var/jenkins_home/workspace/Hello-Kenzan Pipeline
+[8mha:////4OUTYW0oFtw9wZVmEqyjwMTOrzcBSUHNMx7SoVfhVUxwAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4J7t8eVv3zzmfcfDkG5oHrnrlZE4oej1J/apSKoh5rY8AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaGWsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gdpL1fxvAAAAA==[0m[Pipeline] checkout
+using credential robbie-robot
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/entisys360/kubernetes-ci-cd.git # timeout=10
+Fetching upstream changes from https://github.com/entisys360/kubernetes-ci-cd.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress https://github.com/entisys360/kubernetes-ci-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 7536d98a73af6f4459b3e79e9865172a389abe51 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7536d98a73af6f4459b3e79e9865172a389abe51
+Commit message: "Validating rebuild from scratch works by copying in jenkins_home into the jenkins container"
+ > git rev-list --no-walk 7536d98a73af6f4459b3e79e9865172a389abe51 # timeout=10
+[8mha:////4DBj8j9wy78RMFfKaAeg3EQRfMXX79+hN5lit3yxn3fsAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGBtjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI4F2L72ED+qfHravAAAAA==[0m[Pipeline] sh
++ git rev-parse --short HEAD
+[8mha:////4Hnw82N0WmlwXKPvNpafIti7YMTW7fucB5Z0N6MMHYKlAAAAox+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbmFgYK1tC4wmQRYQl/7PAult5Iq/mHSRuYuUkk8yb5r3esM4JTpQs9wZ7h1k7HsNo6+ITpf4WaOKerlwTZgqGSzNJ6sx5QUnFwBLWwErAxqAOlB3aAlvh1UO1QaFtLyXV7yigcd0AT2CimotK5Qtzgt197DLhz/NXAHMswPa1h/gB601hw7wAAAA=[0m[Pipeline] readFile
+[8mha:////4I+TICuuBObRMyUZFhJpwcxmSYQ/DASnZovEK5dvj42pAAAAox+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbWJgYK1tC4wmQRYQl/7PAult5Iq/mHSRuYuUkk8yb5r3esM4JTpQs9wZ7h1k7HsNo6+ITpf4WaOKerlwTZgqGSzNJ6sx5QUnFwBLWwErAxqAOlB3aAlvh1UO1QaFtLyXV7yigcd0AT2CimotK5Qtzgt197DLhz/NXAHMswPa1h/gBJFH5RLwAAAA=[0m[Pipeline] stage
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Build
+Proceeding
+[8mha:////4AVevlUMFPZt4mWx4V22yMEYeWNsKtNYpV1mXQJXxvNDAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTb2BhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI4F2L72ED9lYOJdvAAAAA==[0m[Pipeline] sh
++ docker build --no-cache -t alex301427/hello-kenzan:7536d98 -f applications/hello-kenzan/Dockerfile applications/hello-kenzan
+Sending build context to Docker daemon  72.19kB
+Step 1/4 : FROM nginx:latest
+ ---> 5a3221f0137b
+Step 2/4 : COPY index.html /usr/share/nginx/html/index.html
+ ---> 55924c2ef238
+Step 3/4 : COPY DockerFileEx.jpg /usr/share/nginx/html/DockerFileEx.jpg
+ ---> 30a5a16b6125
+Step 4/4 : EXPOSE 80
+ ---> Running in ff796bf6b69e
+Removing intermediate container ff796bf6b69e
+ ---> 828c438873d7
+Successfully built 828c438873d7
+Successfully tagged alex301427/hello-kenzan:7536d98
+[8mha:////4ELypGEAJ+T+f5UVJkvayvknoaOFJ5Th0LSIF+IS2m8DAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIBiQ5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+S7bfcBVVhdU70AAAA=[0m[Pipeline] stage
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Push
+Proceeding
+[8mha:////4KcejGpvPq0qha4d8AsyuP//fsmlohtL7mSYB9x7ql35AAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6KExM04uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9YJsL8jLsv8AFGlGSr0AAAA=[0m[Pipeline] sh
++ docker push alex301427/hello-kenzan:7536d98
+The push refers to repository [docker.io/alex301427/hello-kenzan]
+589426f9ce8c: Preparing
+c3b9dce5e23c: Preparing
+12fdf55172df: Preparing
+002a63507c1c: Preparing
+1c95c77433e8: Preparing
+1c95c77433e8: Layer already exists
+002a63507c1c: Mounted from library/nginx
+12fdf55172df: Mounted from library/nginx
+c3b9dce5e23c: Pushed
+589426f9ce8c: Pushed
+7536d98: digest: sha256:bf1cc000a0854a03d35b27bebbbf32935894d6039f1d6a0b323dd4182e70d962 size: 1364
+[8mha:////4CtPUy7pb7i59fewZ0DenU+XOQiYdWhaSygHBCtR7MN3AAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRiA5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+TbXfcB1zprYb0AAAA=[0m[Pipeline] stage
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Deploy
+Proceeding
+[8mha:////4IMjdLanFECieIJPhsZiASIIHfPGBUNEDls3Nq9Fh8EnAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRgg5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+TbXfcBlgtweL0AAAA=[0m[Pipeline] kubernetesDeploy
+Starting Kubernetes deployment
+Loading configuration: /var/jenkins_home/workspace/Hello-Kenzan Pipeline/applications/hello-kenzan/k8s/deployment.yaml
+ERROR: ERROR: io.fabric8.kubernetes.client.KubernetesClientException: Operation: [get]  for kind: [Service]  with name: [hello-kenzan]  in namespace: [default]  failed.
+hudson.remoting.ProxyException: io.fabric8.kubernetes.client.KubernetesClientException: Operation: [get]  for kind: [Service]  with name: [hello-kenzan]  in namespace: [default]  failed.
+	at io.fabric8.kubernetes.client.KubernetesClientException.launderThrowable(KubernetesClientException.java:62)
+	at io.fabric8.kubernetes.client.KubernetesClientException.launderThrowable(KubernetesClientException.java:71)
+	at io.fabric8.kubernetes.client.dsl.base.BaseOperation.getMandatory(BaseOperation.java:206)
+	at io.fabric8.kubernetes.client.dsl.base.BaseOperation.get(BaseOperation.java:162)
+	at com.microsoft.jenkins.kubernetes.KubernetesClientWrapper$ServiceUpdater.getCurrentResource(KubernetesClientWrapper.java:446)
+	at com.microsoft.jenkins.kubernetes.KubernetesClientWrapper$ServiceUpdater.getCurrentResource(KubernetesClientWrapper.java:435)
+	at com.microsoft.jenkins.kubernetes.KubernetesClientWrapper$ResourceUpdater.createOrApply(KubernetesClientWrapper.java:358)
+	at com.microsoft.jenkins.kubernetes.KubernetesClientWrapper.apply(KubernetesClientWrapper.java:160)
+	at com.microsoft.jenkins.kubernetes.command.DeploymentCommand$DeploymentTask.doCall(DeploymentCommand.java:168)
+	at com.microsoft.jenkins.kubernetes.command.DeploymentCommand$DeploymentTask.call(DeploymentCommand.java:122)
+	at com.microsoft.jenkins.kubernetes.command.DeploymentCommand$DeploymentTask.call(DeploymentCommand.java:105)
+	at hudson.FilePath.act(FilePath.java:1166)
+	at com.microsoft.jenkins.kubernetes.command.DeploymentCommand.execute(DeploymentCommand.java:67)
+	at com.microsoft.jenkins.kubernetes.command.DeploymentCommand.execute(DeploymentCommand.java:46)
+	at com.microsoft.jenkins.azurecommons.command.CommandService.runCommand(CommandService.java:88)
+	at com.microsoft.jenkins.azurecommons.command.CommandService.execute(CommandService.java:96)
+	at com.microsoft.jenkins.azurecommons.command.CommandService.executeCommands(CommandService.java:75)
+	at com.microsoft.jenkins.azurecommons.command.BaseCommandContext.executeCommands(BaseCommandContext.java:77)
+	at com.microsoft.jenkins.kubernetes.KubernetesDeploy.perform(KubernetesDeploy.java:42)
+	at com.microsoft.jenkins.azurecommons.command.SimpleBuildStepExecution.run(SimpleBuildStepExecution.java:54)
+	at com.microsoft.jenkins.azurecommons.command.SimpleBuildStepExecution.run(SimpleBuildStepExecution.java:35)
+	at org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: hudson.remoting.ProxyException: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1964)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:328)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:322)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1633)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1052)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:987)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1072)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1385)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1397)
+	at okhttp3.internal.connection.RealConnection.connectTls(RealConnection.java:299)
+	at okhttp3.internal.connection.RealConnection.establishProtocol(RealConnection.java:268)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:160)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:256)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:134)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:113)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at io.fabric8.kubernetes.client.utils.ImpersonatorInterceptor.intercept(ImpersonatorInterceptor.java:54)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at io.fabric8.kubernetes.client.utils.HttpClientUtils$2.intercept(HttpClientUtils.java:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at io.fabric8.kubernetes.client.dsl.base.OperationSupport.handleResponse(OperationSupport.java:379)
+	at io.fabric8.kubernetes.client.dsl.base.OperationSupport.handleResponse(OperationSupport.java:344)
+	at io.fabric8.kubernetes.client.dsl.base.OperationSupport.handleGet(OperationSupport.java:313)
+	at io.fabric8.kubernetes.client.dsl.base.OperationSupport.handleGet(OperationSupport.java:296)
+	at io.fabric8.kubernetes.client.dsl.base.BaseOperation.handleGet(BaseOperation.java:770)
+	at io.fabric8.kubernetes.client.dsl.base.BaseOperation.getMandatory(BaseOperation.java:195)
+	... 24 more
+Caused by: hudson.remoting.ProxyException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:302)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1615)
+	... 62 more
+Caused by: hudson.remoting.ProxyException: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 68 more
+[8mha:////4KzHfJb39kvZ2l2tYlHO4Ru3qs4C9zs4AU5/22FHo6l4AAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6LEhM04uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9b0g35eCrPwARY3FJ70AAAA=[0m[Pipeline] }
+[8mha:////4Kg6I5epJrJkjmF0Ebc2lHXvUHUepYKNRtYyqPFfJxAHAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRQlSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsXZLsPVjHBhL0AAAA=[0m[Pipeline] // node
+[8mha:////4Mrt0E8PjCeoNf0T/k5ZvSrLE6fnX7JAlZA3csYCjvikAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRFDSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsXZLsPEHtmtL0AAAA=[0m[Pipeline] End of Pipeline
+ERROR: Kubernetes deployment ended with HasError
+Finished: FAILURE

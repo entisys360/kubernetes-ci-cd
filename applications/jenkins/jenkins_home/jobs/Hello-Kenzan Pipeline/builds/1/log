@@ -1,0 +1,79 @@
+Started by an SCM change
+Obtained Jenkinsfile from git https://github.com/entisys360/kubernetes-ci-cd.git
+Running in Durability level: MAX_SURVIVABILITY
+[8mha:////4B3Yu4+p6Mf0LJr5SBrVKYWSLrzxdxIQuLQcvq/VmWUuAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4JS8QLrv9mxP69niOGWGdc3nCOJzhN3ATlsHDDXVXj6EAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4CQB4c3D5Nr9+ESArpalDsf7I3+g5mjBssFHpywAakDUAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZh/eT83ILSktQifY3cxGIgrakPAHib2iPIAAAA[0mJenkins in /var/jenkins_home/workspace/Hello-Kenzan Pipeline
+[8mha:////4OUTYW0oFtw9wZVmEqyjwMTOrzcBSUHNMx7SoVfhVUxwAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4J7t8eVv3zzmfcfDkG5oHrnrlZE4oej1J/apSKoh5rY8AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaGWsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gdpL1fxvAAAAA==[0m[Pipeline] checkout
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/entisys360/kubernetes-ci-cd.git
+ > git init /var/jenkins_home/workspace/Hello-Kenzan Pipeline # timeout=10
+Fetching upstream changes from https://github.com/entisys360/kubernetes-ci-cd.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/entisys360/kubernetes-ci-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/entisys360/kubernetes-ci-cd.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/entisys360/kubernetes-ci-cd.git # timeout=10
+Fetching upstream changes from https://github.com/entisys360/kubernetes-ci-cd.git
+ > git fetch --tags --progress https://github.com/entisys360/kubernetes-ci-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 7536d98a73af6f4459b3e79e9865172a389abe51 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7536d98a73af6f4459b3e79e9865172a389abe51
+Commit message: "Validating rebuild from scratch works by copying in jenkins_home into the jenkins container"
+First time build. Skipping changelog.
+[8mha:////4DBj8j9wy78RMFfKaAeg3EQRfMXX79+hN5lit3yxn3fsAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGBtjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI4F2L72ED+qfHravAAAAA==[0m[Pipeline] sh
++ git rev-parse --short HEAD
+[8mha:////4Hnw82N0WmlwXKPvNpafIti7YMTW7fucB5Z0N6MMHYKlAAAAox+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbmFgYK1tC4wmQRYQl/7PAult5Iq/mHSRuYuUkk8yb5r3esM4JTpQs9wZ7h1k7HsNo6+ITpf4WaOKerlwTZgqGSzNJ6sx5QUnFwBLWwErAxqAOlB3aAlvh1UO1QaFtLyXV7yigcd0AT2CimotK5Qtzgt197DLhz/NXAHMswPa1h/gB601hw7wAAAA=[0m[Pipeline] readFile
+[8mha:////4I+TICuuBObRMyUZFhJpwcxmSYQ/DASnZovEK5dvj42pAAAAox+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbWJgYK1tC4wmQRYQl/7PAult5Iq/mHSRuYuUkk8yb5r3esM4JTpQs9wZ7h1k7HsNo6+ITpf4WaOKerlwTZgqGSzNJ6sx5QUnFwBLWwErAxqAOlB3aAlvh1UO1QaFtLyXV7yigcd0AT2CimotK5Qtzgt197DLhz/NXAHMswPa1h/gBJFH5RLwAAAA=[0m[Pipeline] stage
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Build
+Proceeding
+[8mha:////4AVevlUMFPZt4mWx4V22yMEYeWNsKtNYpV1mXQJXxvNDAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTb2BhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI4F2L72ED9lYOJdvAAAAA==[0m[Pipeline] sh
++ docker build --no-cache -t alex301427/hello-kenzan:7536d98 -f applications/hello-kenzan/Dockerfile applications/hello-kenzan
+Sending build context to Docker daemon  72.19kB
+Step 1/4 : FROM nginx:latest
+latest: Pulling from library/nginx
+1ab2bdfe9778: Already exists
+a17e64cfe253: Pulling fs layer
+e1288088c7a8: Pulling fs layer
+e1288088c7a8: Verifying Checksum
+e1288088c7a8: Download complete
+a17e64cfe253: Verifying Checksum
+a17e64cfe253: Download complete
+a17e64cfe253: Pull complete
+e1288088c7a8: Pull complete
+Digest: sha256:53ddb41e46de3d63376579acf46f9a41a8d7de33645db47a486de9769201fec9
+Status: Downloaded newer image for nginx:latest
+ ---> 5a3221f0137b
+Step 2/4 : COPY index.html /usr/share/nginx/html/index.html
+ ---> dfc0436ded5c
+Step 3/4 : COPY DockerFileEx.jpg /usr/share/nginx/html/DockerFileEx.jpg
+ ---> 07ddfea52a51
+Step 4/4 : EXPOSE 80
+ ---> Running in 24ed21e64631
+Removing intermediate container 24ed21e64631
+ ---> fb6a885fff64
+Successfully built fb6a885fff64
+Successfully tagged alex301427/hello-kenzan:7536d98
+[8mha:////4ELypGEAJ+T+f5UVJkvayvknoaOFJ5Th0LSIF+IS2m8DAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIBiQ5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+S7bfcBVVhdU70AAAA=[0m[Pipeline] stage
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Push
+Proceeding
+[8mha:////4KcejGpvPq0qha4d8AsyuP//fsmlohtL7mSYB9x7ql35AAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6KExM04uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9YJsL8jLsv8AFGlGSr0AAAA=[0m[Pipeline] sh
++ docker push alex301427/hello-kenzan:7536d98
+The push refers to repository [docker.io/alex301427/hello-kenzan]
+736eb245e700: Preparing
+1f5bc2a64227: Preparing
+12fdf55172df: Preparing
+002a63507c1c: Preparing
+1c95c77433e8: Preparing
+denied: requested access to the resource is denied
+[8mha:////4Fq2lpQpl2s85HWG9o3QMkx+qtYjtu0XCWMWNv1F3XP5AAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRiA5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYu06Qb3eCbP8B5XiFqL0AAAA=[0m[Pipeline] }
+[8mha:////4GzUwXg1WJZ1+8agueZniupN87aWPHyTTRGF7XzsnfDTAAAAoh+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6LEMBon14bFL6hQa6F5D9uHMPlF/pr/IJHEyTvdc5bzemOdIo4cnWotdZ5S7VUfBjc/NXLsroFH1fJF1UyJg1WVHStu7GnBisViWZZjpbGxVAdOnpxgq1vzMEUw5IqzxNkdNHLf3PFEpueymChfmCJ2t6FJTL/O3wCmvhfk+1KQlR/2xIELvQAAAA==[0m[Pipeline] // node
+[8mha:////4K92fsGA4uso66FoKIKm7pz46lMkX0lBLtjQsRjhuiSOAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRiA5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYu06Qb/eCbPcBcCimzr0AAAA=[0m[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE

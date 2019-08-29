@@ -1,0 +1,11 @@
+Started on Aug 27, 2019 10:16:00 PM
+Using strategy: Default
+[poll] Last Built Revision: Revision 7536d98a73af6f4459b3e79e9865172a389abe51 (refs/remotes/origin/master)
+using credential robbie-robot
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git ls-remote -h git@github.com:entisys360/kubernetes-ci-cd.git # timeout=10
+Found 13 remote heads on git@github.com:entisys360/kubernetes-ci-cd.git
+[poll] Latest remote head revision on refs/heads/master is: 110d9a4546297c3347ea5cd5cd57b1a1e10203e6
+Done. Took 0.45 sec
+Changes found

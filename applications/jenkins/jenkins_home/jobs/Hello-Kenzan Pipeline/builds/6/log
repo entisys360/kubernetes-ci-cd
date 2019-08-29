@@ -1,0 +1,276 @@
+Started by user unknown or anonymous
+Obtained Jenkinsfile from git git@github.com:entisys360/kubernetes-ci-cd.git
+Running in Durability level: MAX_SURVIVABILITY
+[8mha:////4B3Yu4+p6Mf0LJr5SBrVKYWSLrzxdxIQuLQcvq/VmWUuAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4JS8QLrv9mxP69niOGWGdc3nCOJzhN3ATlsHDDXVXj6EAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4CQB4c3D5Nr9+ESArpalDsf7I3+g5mjBssFHpywAakDUAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZh/eT83ILSktQifY3cxGIgrakPAHib2iPIAAAA[0mJenkins in /var/jenkins_home/workspace/Hello-Kenzan Pipeline
+[8mha:////4OUTYW0oFtw9wZVmEqyjwMTOrzcBSUHNMx7SoVfhVUxwAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4J7t8eVv3zzmfcfDkG5oHrnrlZE4oej1J/apSKoh5rY8AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaGWsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gdpL1fxvAAAAA==[0m[Pipeline] checkout
+using credential robbie-robot
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:entisys360/kubernetes-ci-cd.git # timeout=10
+Fetching upstream changes from git@github.com:entisys360/kubernetes-ci-cd.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:entisys360/kubernetes-ci-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 7536d98a73af6f4459b3e79e9865172a389abe51 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7536d98a73af6f4459b3e79e9865172a389abe51
+Commit message: "Validating rebuild from scratch works by copying in jenkins_home into the jenkins container"
+ > git rev-list --no-walk 7536d98a73af6f4459b3e79e9865172a389abe51 # timeout=10
+[8mha:////4DBj8j9wy78RMFfKaAeg3EQRfMXX79+hN5lit3yxn3fsAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGBtjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI4F2L72ED+qfHravAAAAA==[0m[Pipeline] sh
++ git rev-parse --short HEAD
+[8mha:////4Hnw82N0WmlwXKPvNpafIti7YMTW7fucB5Z0N6MMHYKlAAAAox+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbmFgYK1tC4wmQRYQl/7PAult5Iq/mHSRuYuUkk8yb5r3esM4JTpQs9wZ7h1k7HsNo6+ITpf4WaOKerlwTZgqGSzNJ6sx5QUnFwBLWwErAxqAOlB3aAlvh1UO1QaFtLyXV7yigcd0AT2CimotK5Qtzgt197DLhz/NXAHMswPa1h/gB601hw7wAAAA=[0m[Pipeline] readFile
+[8mha:////4I+TICuuBObRMyUZFhJpwcxmSYQ/DASnZovEK5dvj42pAAAAox+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbWJgYK1tC4wmQRYQl/7PAult5Iq/mHSRuYuUkk8yb5r3esM4JTpQs9wZ7h1k7HsNo6+ITpf4WaOKerlwTZgqGSzNJ6sx5QUnFwBLWwErAxqAOlB3aAlvh1UO1QaFtLyXV7yigcd0AT2CimotK5Qtzgt197DLhz/NXAHMswPa1h/gBJFH5RLwAAAA=[0m[Pipeline] stage
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Build
+Proceeding
+[8mha:////4AVevlUMFPZt4mWx4V22yMEYeWNsKtNYpV1mXQJXxvNDAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTb2BhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI4F2L72ED9lYOJdvAAAAA==[0m[Pipeline] sh
++ docker build --no-cache -t alex301427/hello-kenzan:7536d98 -f applications/hello-kenzan/Dockerfile applications/hello-kenzan
+Sending build context to Docker daemon  72.19kB
+Step 1/4 : FROM nginx:latest
+ ---> 5a3221f0137b
+Step 2/4 : COPY index.html /usr/share/nginx/html/index.html
+ ---> 440a58c3e181
+Step 3/4 : COPY DockerFileEx.jpg /usr/share/nginx/html/DockerFileEx.jpg
+ ---> 93cec8085409
+Step 4/4 : EXPOSE 80
+ ---> Running in a30451313698
+Removing intermediate container a30451313698
+ ---> 99d031eacbce
+Successfully built 99d031eacbce
+Successfully tagged alex301427/hello-kenzan:7536d98
+[8mha:////4ELypGEAJ+T+f5UVJkvayvknoaOFJ5Th0LSIF+IS2m8DAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIBiQ5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+S7bfcBVVhdU70AAAA=[0m[Pipeline] stage
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Push
+Proceeding
+[8mha:////4KcejGpvPq0qha4d8AsyuP//fsmlohtL7mSYB9x7ql35AAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6KExM04uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9YJsL8jLsv8AFGlGSr0AAAA=[0m[Pipeline] sh
++ docker push alex301427/hello-kenzan:7536d98
+The push refers to repository [docker.io/alex301427/hello-kenzan]
+c67b4f54824f: Preparing
+e5f471efffcc: Preparing
+12fdf55172df: Preparing
+002a63507c1c: Preparing
+1c95c77433e8: Preparing
+12fdf55172df: Layer already exists
+002a63507c1c: Layer already exists
+1c95c77433e8: Layer already exists
+e5f471efffcc: Pushed
+c67b4f54824f: Pushed
+7536d98: digest: sha256:6d9f50e123ae915c43bd66ba336ea060e58f43efdcab5e2593ae057dfdeda0c5 size: 1364
+[8mha:////4CtPUy7pb7i59fewZ0DenU+XOQiYdWhaSygHBCtR7MN3AAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRiA5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+TbXfcB1zprYb0AAAA=[0m[Pipeline] stage
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Deploy
+Proceeding
+[8mha:////4IMjdLanFECieIJPhsZiASIIHfPGBUNEDls3Nq9Fh8EnAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRgg5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+TbXfcBlgtweL0AAAA=[0m[Pipeline] kubernetesDeploy
+Starting Kubernetes deployment
+Loading configuration: /var/jenkins_home/workspace/Hello-Kenzan Pipeline/applications/hello-kenzan/k8s/deployment.yaml
+Applied V1Service: class V1Service {
+    apiVersion: v1
+    kind: Service
+    metadata: class V1ObjectMeta {
+        annotations: null
+        clusterName: null
+        creationTimestamp: 2019-08-27T22:02:27.000Z
+        deletionGracePeriodSeconds: null
+        deletionTimestamp: null
+        finalizers: null
+        generateName: null
+        generation: null
+        initializers: null
+        labels: {app=hello-kenzan}
+        name: hello-kenzan
+        namespace: default
+        ownerReferences: null
+        resourceVersion: 17788
+        selfLink: /api/v1/namespaces/default/services/hello-kenzan
+        uid: 5bc3e914-c916-11e9-8200-080027585ffe
+    }
+    spec: class V1ServiceSpec {
+        clusterIP: 10.96.215.219
+        externalIPs: null
+        externalName: null
+        externalTrafficPolicy: Cluster
+        healthCheckNodePort: null
+        loadBalancerIP: null
+        loadBalancerSourceRanges: null
+        ports: [class V1ServicePort {
+            name: null
+            nodePort: 32289
+            port: 80
+            protocol: TCP
+            targetPort: 80
+        }]
+        publishNotReadyAddresses: null
+        selector: {app=hello-kenzan, tier=hello-kenzan}
+        sessionAffinity: None
+        sessionAffinityConfig: null
+        type: NodePort
+    }
+    status: class V1ServiceStatus {
+        loadBalancer: class V1LoadBalancerStatus {
+            ingress: null
+        }
+    }
+}
+Applied ExtensionsV1beta1Deployment: class ExtensionsV1beta1Deployment {
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    metadata: class V1ObjectMeta {
+        annotations: null
+        clusterName: null
+        creationTimestamp: 2019-08-27T22:02:27.000Z
+        deletionGracePeriodSeconds: null
+        deletionTimestamp: null
+        finalizers: null
+        generateName: null
+        generation: 2
+        initializers: null
+        labels: {app=hello-kenzan}
+        name: hello-kenzan
+        namespace: default
+        ownerReferences: null
+        resourceVersion: 17789
+        selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/hello-kenzan
+        uid: 5bc54cb9-c916-11e9-8200-080027585ffe
+    }
+    spec: class ExtensionsV1beta1DeploymentSpec {
+        minReadySeconds: null
+        paused: null
+        progressDeadlineSeconds: 600
+        replicas: 1
+        revisionHistoryLimit: 10
+        rollbackTo: null
+        selector: class V1LabelSelector {
+            matchExpressions: null
+            matchLabels: {app=hello-kenzan, tier=hello-kenzan}
+        }
+        strategy: class ExtensionsV1beta1DeploymentStrategy {
+            rollingUpdate: null
+            type: Recreate
+        }
+        template: class V1PodTemplateSpec {
+            metadata: class V1ObjectMeta {
+                annotations: null
+                clusterName: null
+                creationTimestamp: null
+                deletionGracePeriodSeconds: null
+                deletionTimestamp: null
+                finalizers: null
+                generateName: null
+                generation: null
+                initializers: null
+                labels: {app=hello-kenzan, tier=hello-kenzan}
+                name: null
+                namespace: null
+                ownerReferences: null
+                resourceVersion: null
+                selfLink: null
+                uid: null
+            }
+            spec: class V1PodSpec {
+                activeDeadlineSeconds: null
+                affinity: null
+                automountServiceAccountToken: null
+                containers: [class V1Container {
+                    args: null
+                    command: null
+                    env: null
+                    envFrom: null
+                    image: alex301427/hello-kenzan:7536d98
+                    imagePullPolicy: IfNotPresent
+                    lifecycle: null
+                    livenessProbe: null
+                    name: hello-kenzan
+                    ports: [class V1ContainerPort {
+                        containerPort: 80
+                        hostIP: null
+                        hostPort: null
+                        name: hello-kenzan
+                        protocol: TCP
+                    }]
+                    readinessProbe: null
+                    resources: class V1ResourceRequirements {
+                        limits: null
+                        requests: null
+                    }
+                    securityContext: null
+                    stdin: null
+                    stdinOnce: null
+                    terminationMessagePath: /dev/termination-log
+                    terminationMessagePolicy: File
+                    tty: null
+                    volumeDevices: null
+                    volumeMounts: null
+                    workingDir: null
+                }]
+                dnsConfig: null
+                dnsPolicy: ClusterFirst
+                enableServiceLinks: null
+                hostAliases: null
+                hostIPC: null
+                hostNetwork: null
+                hostPID: null
+                hostname: null
+                imagePullSecrets: null
+                initContainers: null
+                nodeName: null
+                nodeSelector: null
+                priority: null
+                priorityClassName: null
+                readinessGates: null
+                restartPolicy: Always
+                runtimeClassName: null
+                schedulerName: default-scheduler
+                securityContext: class V1PodSecurityContext {
+                    fsGroup: null
+                    runAsGroup: null
+                    runAsNonRoot: null
+                    runAsUser: null
+                    seLinuxOptions: null
+                    supplementalGroups: null
+                    sysctls: null
+                }
+                serviceAccount: null
+                serviceAccountName: null
+                shareProcessNamespace: null
+                subdomain: null
+                terminationGracePeriodSeconds: 30
+                tolerations: null
+                volumes: null
+            }
+        }
+    }
+    status: class ExtensionsV1beta1DeploymentStatus {
+        availableReplicas: 1
+        collisionCount: null
+        conditions: [class ExtensionsV1beta1DeploymentCondition {
+            lastTransitionTime: 2019-08-27T22:02:30.000Z
+            lastUpdateTime: 2019-08-27T22:02:30.000Z
+            message: Deployment has minimum availability.
+            reason: MinimumReplicasAvailable
+            status: True
+            type: Available
+        }, class ExtensionsV1beta1DeploymentCondition {
+            lastTransitionTime: 2019-08-27T22:02:27.000Z
+            lastUpdateTime: 2019-08-27T22:02:30.000Z
+            message: ReplicaSet "hello-kenzan-fb9d4c5b6" has successfully progressed.
+            reason: NewReplicaSetAvailable
+            status: True
+            type: Progressing
+        }]
+        observedGeneration: 1
+        readyReplicas: 1
+        replicas: 1
+        unavailableReplicas: null
+        updatedReplicas: 1
+    }
+}
+Finished Kubernetes deployment
+[8mha:////4KzHfJb39kvZ2l2tYlHO4Ru3qs4C9zs4AU5/22FHo6l4AAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6LEhM04uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9b0g35eCrPwARY3FJ70AAAA=[0m[Pipeline] }
+[8mha:////4Kg6I5epJrJkjmF0Ebc2lHXvUHUepYKNRtYyqPFfJxAHAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRQlSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsXZLsPVjHBhL0AAAA=[0m[Pipeline] // node
+[8mha:////4Mrt0E8PjCeoNf0T/k5ZvSrLE6fnX7JAlZA3csYCjvikAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRFDSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsXZLsPEHtmtL0AAAA=[0m[Pipeline] End of Pipeline
+Finished: SUCCESS

@@ -10,4 +10,4 @@ EXPOSE 80
 # The below command works beautifully if you do NOT mount web ROOT as a local disk in the container,
 # as each container will then have their own container ID in their respective index.html file..
 #
-CMD sleep 1 ; echo "Container hostname = $HOSTNAME"  >> index.html ; while true ; do sleep 10 ; done
+#CMD sleep 1 ; echo "Container hostname = $HOSTNAME"  >> index.html ; while true ; do sleep 10 ; done
